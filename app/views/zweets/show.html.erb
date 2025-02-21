@@ -1,5 +1,14 @@
 <p style="color: green"><%= notice %></p>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Zweet</h1>
+      <p><%= @zweet.content %></p>
+      <p><%= @zweet.user.email %></p>
+      <p><%= @zweet.created_at %></p>
+    </div>
+  </div>
+</div>
 <%= render @zweet %>
 
 <div>
