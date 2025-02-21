@@ -8,8 +8,14 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <p>
-            <p>Zweeter</p>
-            <%= link_to "New zweet", new_zweet_path, class: "btn btn-primary" %>
+            <div class="d-flex flex-column">
+              <div class="order-0 text-left" style="width: 100%;">
+                <%= image_tag 'imagelogo.svg', class: "img-fluid" %>
+              </div>
+            </div>
+            <div style="position: relative; left: 50%; transform: translateX(-50%);">
+              <%= link_to "New zweet", new_zweet_path, class: "btn btn-primary" %>
+            </div>
           </p>
         </div>
       </div>
@@ -20,11 +26,10 @@
   <% @zweets.each do |zweet| %>
     <%= render zweet %>
     <p>
-      <%= link_to "Show this zweet", zweet %>
+      <%= link_to edit_zweet_path(zweet), class: "btn btn-outline-secondary" do %>
+        <%= image_tag "edit.svg" %>
+      <% end %>
     </p>
   <% end %>
-    <p>
-      <%= link_to "New zweet", new_zweet_path %>
-    </p>
 </div>
 </div>
