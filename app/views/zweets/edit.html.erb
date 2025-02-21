@@ -1,14 +1,8 @@
 <% content_for :title, "Editing zweet" %>
-<div class="container">
-<h1>Editing zweet</h1>
+<div class="container my-4">
+<h1>Modifier le zweet</h1>
 
 <%= render "form", zweet: @zweet %>
 
 <br>
-
-<div>
-  <%= link_to "Show this zweet", @zweet %> |
-  <%= link_to "Back to zweets", zweets_path %> |
-  <%= button_to "Destroy zweet", @zweet, method: :delete, data: { confirm: "Are you sure?" } %>
-</div>
 </div>
