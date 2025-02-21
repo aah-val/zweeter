@@ -1,7 +1,26 @@
+<style>
+  .card {
+  background-color: #000!important; 
+  color: #fff!important;
+  border: none; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+  .card-body {
+    padding: 20px;
+    .card-text {
+      strong {
+        color: #fff;
+      }
+    }
+  }
+}
+  </style>
+
 <div class="container text-center my-4">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div id="<%= dom_id zweet %>" class="card shadow-sm">
+      <div id="<%= dom_id zweet %>" class="card shadow-sm" >
         <div class="card-body">
           <p class="card-text">
             <%= zweet.user_id %>
@@ -18,4 +37,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>      
