@@ -52,7 +52,7 @@
         <div class="zweet-image justfiy-content-center">
           <% if zweet.image.present? %>
             <p class="card-image" style="position: relative;">
-              <img src="<%= zweet.image %>" class="img-fluid" alt="image" style="max-width: 100%; height: auto;">
+              <img src="<%= zweet.image %>" class="img-fluid" alt="image" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;">
             </p>
           <% end %>
           <small style="position: absolute; bottom: 0; right: 5px; color: grey;">
