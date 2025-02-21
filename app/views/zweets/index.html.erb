@@ -26,7 +26,7 @@
   <% @zweets.each do |zweet| %>
     <%= render zweet %>
     <p>
-      <%= link_to edit_zweet_path(zweet), class: "btn btn-outline-secondary" do %>
+      <%= link_to edit_zweet_path(zweet), class: "btn btn-outline-secondary mt-4" do %>
         <%= image_tag "edit.svg" %>
       <% end %>
     </p>

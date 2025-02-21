@@ -5,11 +5,12 @@
 
   <div class="form-inputs">
     <%= f.association :user %>
+    <p>Pour vous créer un nouveau profil -> <%= link_to "Cliquez ici !",new_user_path %> </p>
     <%= f.input :content %>
     <%= f.input :image %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-success text-white" %>
+  <%= link_to "Retour aux Zweets", zweets_path, class: "btn btn-secondary" %>
   </div>
 <% end %>

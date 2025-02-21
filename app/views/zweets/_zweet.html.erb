@@ -1,8 +1,18 @@
 <style>
   .card {
-  background-color: #000!important; 
-  color: #fff!important;
-  border: none; 
+  background-color: #E0E0E0!important; 
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 10px;
+    right: 10px;
+    height: 16px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  }
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 
@@ -37,4 +47,18 @@
       </div>
     </div>
   </div>
-</div>      
+  
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var card = document.getElementById('<%= dom_id zweet %>');
+    card.addEventListener('mouseenter', function () {
+      card.style.transition = 'transform 0.3s, box-shadow 0.3s';
+      card.style.transform = 'scale(1.05)';
+      card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.3)';
+    });
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = 'scale(1)';
+      card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+    });
+  });
+</script>
