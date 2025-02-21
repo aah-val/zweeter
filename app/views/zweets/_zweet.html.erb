@@ -1,7 +1,7 @@
 <style>
   .card {
-    background-color:rgb(36, 36, 36)!important; 
-    color: #fff!important;
+    background-color: rgb(36, 36, 36) !important; 
+    color: #fff !important;
     border: none; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -10,6 +10,7 @@
 
   .card-body {
     padding: 20px;
+    text-align: left; /* Alignement du texte à gauche */
   }
 
   .card-text {
@@ -17,7 +18,7 @@
   }
 
   .card-text strong {
-    color: #fff;
+    color: grey;
   }
 
   .img-fluid {
@@ -29,18 +30,23 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div id="<%= dom_id zweet %>" class="card shadow-sm">
-        <div class="card-body">
+        <div class="card-body text-start">
           <p class="card-text">
-            <strong>User ID:</strong> <%= zweet.user_id %>
+            <%= zweet.user.name %> 
+            <% username, _domain = zweet.user.pseudo.split('@', 2) %> 
+            <strong>@<%= username %></strong>
           </p>
           
-          <p class="card-text">
-            <strong>Content:</strong> <%= zweet.content %>
+          <p class="card-text mt-3">
+            <%= zweet.content %>
           </p>
-
-          <p class="card-text">
-            <img src="<%= zweet.image %>" class="img-fluid" alt="image" style="max-width: 100%; height: auto;">
-          </p>
+        </div>
+        <div class="zweet-image justfiy-content-center">
+          <% if zweet.image.present? %>
+            <p class="card-image">
+              <img src="<%= zweet.image %>" class="img-fluid" alt="image" style="max-width: 100%; height: auto;">
+            </p>
+          <% end %>
         </div>
       </div>
     </div>

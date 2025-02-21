@@ -14,14 +14,14 @@
               </div>
             </div>
             <div style="position: relative; left: 50%; transform: translateX(-50%);">
-              <%= link_to "New zweet", new_zweet_path, class: "btn btn-primary" %>
+              <%= link_to "New zweet", new_zweet_path, class: "btn btn-dark" %>
             </div>
           </p>
         </div>
       </div>
     </div>
     <div class="col-md-8 text-center">
-  <h1>Accueil</h1>
+  <h1>Accueil - Zweets récents</h1>
 <div id="zweets">
   <% @zweets.each do |zweet| %>
     <%= render zweet %>
