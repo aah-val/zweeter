@@ -14,13 +14,15 @@
               </div>
                 <div class="row my-4">
     <div class="col text-center">
-      <h1 class="display-4">Bienvenue sur Zweeter</h1>
+      <h1 class="display-4 text-md-left text-center">Bienvenue sur Zweeter</h1>
       <p class="lead">Partagez vos pensées avec le monde entier de façon anonyme ; cliquez sur "New Zweet" et choisissez ou créez un profil</p>
     </div>
   </div>
             </div>
             <div style="position: relative; left: 50%; transform: translateX(-50%);">
-              <%= link_to "New zweet", new_zweet_path, class: "btn btn-dark" %>
+              <div class="d-flex justify-content-center mb-5">
+                <%= link_to "New zweet", new_zweet_path, class: "btn btn-dark" %>
+              </div>
             </div>
           </p>
         </div>
