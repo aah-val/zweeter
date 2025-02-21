@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Users" %>
-
+<div class="container mt-4">
+  <div class="row">
 <h1>Users</h1>
 
 <div id="users">
@@ -12,5 +13,6 @@
     </p>
   <% end %>
 </div>
-
+</div>
 <%= link_to "New user", new_user_path %>
+</div>
