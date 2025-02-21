@@ -22,15 +22,10 @@ class ZweetsController < ApplicationController
   # POST /zweets or /zweets.json
   def create
     @zweet = Zweet.new(zweet_params)
-
-    respond_to do |format|
-      if @zweet.save
-        format.html { redirect_to @zweet, notice: "Zweet was successfully created." }
-        format.json { render :show, status: :created, location: @zweet }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @zweet.errors, status: :unprocessable_entity }
-      end
+    if @zweet.save
+      redirect_to zweets_path, notice: 'Zweet was successfully created.'
+    else
+      render :new
     end
   end
 

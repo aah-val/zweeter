@@ -20,22 +20,23 @@
   </div>
             </div>
             <div style="position: relative; left: 50%; transform: translateX(-50%);">
-              <%= link_to "New zweet", new_zweet_path, class: "btn btn-primary" %>
+              <%= link_to "New zweet", new_zweet_path, class: "btn btn-dark" %>
             </div>
           </p>
         </div>
       </div>
     </div>
     <div class="col-md-8 text-center">
-  <h1>Accueil</h1>
+  <h1>Zweets Récents</h1>
+  <p>Twitter mais avec un Z</p>
 <div id="zweets">
-  <% @zweets.each do |zweet| %>
+  <% @zweets.order(created_at: :desc).each do |zweet| %>
     <%= render zweet %>
-    <p>
+    <!-- <p>
       <%= link_to edit_zweet_path(zweet), class: "btn btn-outline-secondary mt-4" do %>
         <%= image_tag "edit.svg" %>
       <% end %>
-    </p>
+    </p> -->
   <% end %>
 </div>
 </div>
