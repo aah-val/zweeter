@@ -1,17 +1,27 @@
-<div id="<%= dom_id zweet %>">
-  <p>
-    <strong>Content:</strong>
-    <%= zweet.content %>
-  </p>
+<div class="container text-center my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div id="<%= dom_id zweet %>" class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Content:</strong>
+            <%= zweet.content %>
+          </p>
 
-  <p>
-    <strong>Image:</strong>
-    <%= zweet.image %>
-  </p>
+          <p class="card-text">
+            <strong>Image:</strong>
+            <div class="img-fluid">
+            <%= image_tag zweet.image %>
+            </div>
+            
+          </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= zweet.user_id %>
-  </p>
-
+          <p class="card-text">
+            <strong>User:</strong>
+            <%= zweet.user_id %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
