@@ -1,19 +1,21 @@
 <p style="color: green"><%= notice %></p>
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h1>Zweet</h1>
-      <p><%= @zweet.content %></p>
-      <p><%= @zweet.user.email %></p>
-      <p><%= @zweet.created_at %></p>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card mt-4">
+        <div class="card-header">
+          <h1>Zweet</h1>
+        </div>
+        <div class="card-body">
+          <p><%= @zweet.content %></p>
+          <p class="text-muted"><%= @zweet.created_at.strftime("%B %d, %Y %H:%M") %></p>
+        </div>
+        <div class="card-footer text-right">
+          <%= link_to "Edit this zweet", edit_zweet_path(@zweet), class: "btn btn-warning" %>
+          <%= link_to "Back to zweets", zweets_path, class: "btn btn-secondary" %>
+          <%= link_to "Destroy this zweet", @zweet, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<%= render @zweet %>
-
-<div>
-  <%= link_to "Edit this zweet", edit_zweet_path(@zweet) %> |
-  <%= link_to "Back to zweets", zweets_path %>
-
-  <%= button_to "Destroy this zweet", @zweet, method: :delete %>
 </div>
