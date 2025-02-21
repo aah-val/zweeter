@@ -32,6 +32,11 @@
       <div id="<%= dom_id zweet %>" class="card shadow-sm">
         <div class="card-body text-start">
           <p class="card-text">
+            <% if zweet.user.photo.present? %>
+              <span class="user-photo-badge" style="margin-right: 5px;">
+          <img src="<%= zweet.user.photo %>" alt="User photo" class="rounded-circle" style="width: 35px; height: 35px;">
+              </span>
+            <% end %>
             <%= zweet.user.name %> 
             <% username, _domain = zweet.user.pseudo.split('@', 2) %> 
             <strong>@<%= username %></strong>
