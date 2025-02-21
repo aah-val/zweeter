@@ -40,9 +40,9 @@
             <%= zweet.user.name %> 
             <% username, _domain = zweet.user.pseudo.split('@', 2) %> 
             <strong>@<%= username %></strong>
-            <% if zweet.user.verified = true %>
-              <%= image_tag "verified.svg", alt: "Verified", class: "verified-badge", style: "width: 20px; height: 20px;" %>
-            <% end %>
+            <!--<% if zweet.user.verified? %>
+              <%= image_tag "verified.svg", class: "verified-badge", style: "width: 20px; height: 20px;" %>
+            <% end %>-->
           </p>
           
           <p class="card-text mt-3">
