@@ -64,3 +64,4 @@ gem "dartsass-rails"
 gem "bootstrap", "~> 5.3.3"
 
 ruby "3.4.1"
+gem "devise", "~> 4.9"
