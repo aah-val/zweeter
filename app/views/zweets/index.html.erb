@@ -2,8 +2,20 @@
 
 <% content_for :title, "Zweets" %>
 
-<h1>Zweets</h1>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>
+            <p>Zweeter</p>
+            <%= link_to "New zweet", new_zweet_path, class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 text-center">
+  <h1>Accueil</h1>
 <div id="zweets">
   <% @zweets.each do |zweet| %>
     <%= render zweet %>
@@ -11,6 +23,8 @@
       <%= link_to "Show this zweet", zweet %>
     </p>
   <% end %>
+    <p>
+      <%= link_to "New zweet", new_zweet_path %>
+    </p>
 </div>
-
-<%= link_to "New zweet", new_zweet_path %>
+</div>

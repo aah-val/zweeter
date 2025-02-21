@@ -4,6 +4,11 @@
       <div id="<%= dom_id zweet %>" class="card shadow-sm">
         <div class="card-body">
           <p class="card-text">
+            <strong>User:</strong>
+            <%= zweet.user_id %>
+          </p>
+          
+          <p class="card-text">
             <strong>Content:</strong>
             <%= zweet.content %>
           </p>
@@ -11,14 +16,9 @@
           <p class="card-text">
             <strong>Image:</strong>
             <div class="img-fluid">
-            <%= image_tag zweet.image %>
+            <img src="<%= zweet.image %>">
             </div>
             
-          </p>
-
-          <p class="card-text">
-            <strong>User:</strong>
-            <%= zweet.user_id %>
           </p>
         </div>
       </div>
