@@ -1,33 +1,41 @@
 <style>
   .card {
-  background-color: #000!important; 
-  color: #fff!important;
-  border: none; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color:rgb(36, 36, 36)!important; 
+    color: #fff!important;
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-family: 'Roboto', sans-serif;
+  }
 
   .card-body {
     padding: 20px;
-    .card-text {
-      strong {
-        color: #fff;
-      }
-    }
   }
-}
-  </style>
+
+  .card-text {
+    margin-bottom: 15px;
+  }
+
+  .card-text strong {
+    color: #fff;
+  }
+
+  .img-fluid {
+    border-radius: 10px;
+  }
+</style>
 
 <div class="container text-center my-4">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div id="<%= dom_id zweet %>" class="card shadow-sm" >
+      <div id="<%= dom_id zweet %>" class="card shadow-sm">
         <div class="card-body">
           <p class="card-text">
-            <%= zweet.user_id %>
+            <strong>User ID:</strong> <%= zweet.user_id %>
           </p>
           
           <p class="card-text">
-            <%= zweet.content %>
+            <strong>Content:</strong> <%= zweet.content %>
           </p>
 
           <p class="card-text">
@@ -37,4 +45,4 @@
       </div>
     </div>
   </div>
-</div>      
+</div>
