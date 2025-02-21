@@ -1,0 +1,9 @@
+<% content_for :title, "New zweet" %>
+
+<h1>New zweet</h1>
+
+<%= render "form", zweet: @zweet %>
+
+<br>
+
+<%= link_to "Back to zweets", zweets_path, class: "text-white" %>
