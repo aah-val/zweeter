@@ -4,21 +4,15 @@
       <div id="<%= dom_id zweet %>" class="card shadow-sm">
         <div class="card-body">
           <p class="card-text">
-            <strong>User:</strong>
             <%= zweet.user_id %>
           </p>
           
           <p class="card-text">
-            <strong>Content:</strong>
             <%= zweet.content %>
           </p>
 
           <p class="card-text">
-            <strong>Image:</strong>
-            <div class="img-fluid">
-            <img src="<%= zweet.image %>">
-            </div>
-            
+            <img src="<%= zweet.image %>" class"img-fluid" alt="image">            
           </p>
         </div>
       </div>
