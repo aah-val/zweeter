@@ -1,2 +1,19 @@
-// Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+// styles cartes
+.card {
+  background-color: #000; 
+  color: #fff;
+  border: none; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+  .card-body {
+    padding: 20px;
+    .card-text {
+      strong {
+        color: #fff;
+      }
+    }
+  }
+}
